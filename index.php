@@ -173,7 +173,7 @@
                 <div class="modal-body"> <!--Cuerpo del Formulario modal-->
                     <!-- Codigo php para solicitar datos y asignarlos al arreglo para rellenar los campos a editar -->
                     <?php
-                    $sql1 = "select * from tablax where run = " . $_REQUEST['runedit']; //realiza la busqueda de datos por el run
+                    $sql1 = "select * from tablax where run = '" . $_REQUEST['runedit'] . "'"; //realiza la busqueda de datos por el run
                     $res = $conexion->query($sql1); //ejecuta la query
                     $campos = $res->fetch_assoc(); //asigna los valores del arreglo a campos para luego poder mostrarlos con asignaciones
                     ?>
